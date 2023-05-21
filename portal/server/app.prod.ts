@@ -6,7 +6,7 @@ async function startApp() {
   koa.use(require("./middlewares/logger"));
   koa.use(require("./middlewares/cookie"));
   koa.use(require("./middlewares/koa-cors"));
-  await require('./middlewares/useSSR.dev')(koa)
+  await require('./middlewares/useSSR.prod')(koa)
   await require("./middlewares/useRouter")(koa);
 
   const PORT = 3333;

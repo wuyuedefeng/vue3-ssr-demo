@@ -9,7 +9,7 @@ class HomeController extends ApplicationController {
 		})
 
 		this.get('asyncSSR', async (ctx: Koa.Context) => {
-			ctx.body = "hello asyncSSR"
+			ctx.ssrData = 'hello world from ssrData'
 		})
 	}
 }
